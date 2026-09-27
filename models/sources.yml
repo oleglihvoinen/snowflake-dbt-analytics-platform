@@ -1,0 +1,13 @@
+version: 2
+sources:
+  - name: raw
+    database: ANALYTICS
+    schema: RAW
+    tables:
+      - name: orders
+      - name: order_items
+models:
+  - name: fct_orders
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
