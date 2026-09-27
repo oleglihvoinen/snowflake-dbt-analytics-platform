@@ -1,0 +1,11 @@
+name: snowflake_analytics
+version: '1.0.0'
+config-version: 2
+profile: snowflake_analytics
+model-paths: ["models"]
+models:
+  snowflake_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
